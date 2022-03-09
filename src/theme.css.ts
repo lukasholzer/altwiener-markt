@@ -38,12 +38,30 @@ export const easter = createTheme(colors, {
   },
 });
 
+export const easterDark = createTheme(colors, {
+  brand: '#00a9a2',
+  key: '#c2aa85',
+  background: '#00a9a2',
+  text: {
+    normal: '#ffffff',
+  },
+});
+
 export const christmas = createTheme(colors, {
   brand: `#005659`,
   key: '#c2aa85',
   background: '#ffffff',
   text: {
     normal: '#323232',
+  },
+});
+
+export const christmasDark = createTheme(colors, {
+  brand: `#005659`,
+  key: '#c2aa85',
+  background: '#005659',
+  text: {
+    normal: '#ffffff',
   },
 });
 
