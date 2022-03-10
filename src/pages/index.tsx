@@ -1,3 +1,4 @@
+import { Grid, GridItem } from '@/components/Grid';
 import { Section } from '@/components/Section';
 import { christmas } from '@/theme.css';
 import React, { FC, useContext } from 'react';
@@ -13,6 +14,11 @@ const App: FC = () => {
         Switch to {theme === christmas ? '🐣' : '🎄'} theme
       </button>
       <Section>A section</Section>
+      <Grid>
+        <GridItem size={2}>A</GridItem>
+        <GridItem size={4}>B</GridItem>
+        <GridItem size={6}>C</GridItem>
+      </Grid>
       <h2>Headline of type 2</h2>
       <p>
         Follow me on Twitter (
