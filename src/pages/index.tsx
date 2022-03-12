@@ -15,9 +15,11 @@ const App: FC = () => {
       </button>
       <Section>A section</Section>
       <Grid>
-        <GridItem size={2}>A</GridItem>
+        <GridItem size={2} start={2}>
+          A
+        </GridItem>
         <GridItem size={4}>B</GridItem>
-        <GridItem size={6}>C</GridItem>
+        <GridItem size={4}>C</GridItem>
       </Grid>
       <h2>Headline of type 2</h2>
       <p>

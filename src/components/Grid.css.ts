@@ -9,20 +9,20 @@ export const grid = style({
 
 export const gridItem = recipe({
   variants: {
-    size: {
-      1: { gridColumn: `auto/span 1` },
-      2: { gridColumn: `auto/span 2` },
-      3: { gridColumn: `auto/span 3` },
-      4: { gridColumn: `auto/span 4` },
-      5: { gridColumn: `auto/span 5` },
-      6: { gridColumn: `auto/span 6` },
-      7: { gridColumn: `auto/span 7` },
-      8: { gridColumn: `auto/span 8` },
-      9: { gridColumn: `auto/span 9` },
-      10: { gridColumn: `auto/span 10` },
-      11: { gridColumn: `auto/span 11` },
-      12: { gridColumn: `auto/span 12` },
-    },
+    size: [...Array(12).keys()].reduce(
+      (prev, cur) => ({
+        ...prev,
+        [cur + 1]: { gridColumn: `auto/span ${cur + 1}` },
+      }),
+      {} as Record<number, ComplexStyleRule>,
+    ),
+    start: [...Array(12).keys()].reduce(
+      (prev, cur) => ({
+        ...prev,
+        [cur + 1]: { gridColumnStart: cur + 1 },
+      }),
+      {} as Record<number, ComplexStyleRule>,
+    ),
   },
   defaultVariants: {
     size: 12,
